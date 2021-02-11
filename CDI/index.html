@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CDI</title>
+		<link rel="stylesheet" type="text/css" href="../style.css"/>
+		<meta charset="UTF-8"/>
+	</head>
+
+	<body>
+		<section class="menu">
+			<h2>Меню</h2>
+
+			<ul>
+				<li><a href="../wildfly/index.html">WildFly</a></li>
+				<li><a href="../Maven/index.html">Maven</a></li>
+				<li><a href="../JSF/index.html">JSF</a></li>
+				<li class="selected"><a href="index.html">CDI</a></li>
+			</ul>
+		</section>
+
+		<section class="main">
+			<article>
+				<h1>
+					Подключение <span class="name">CDI</span>
+				</h1>
+
+				<ol>
+					<li>
+						Импортируем зависимость в <span class="name">pom.xml</span>
+						(<a href="https://mvnrepository.com/artifact/javax.enterprise/cdi-api">Import CDI</a>)
+					</li>
+					<li>
+						Создаем файл <span class="name">beans.xml</span><br/>
+						Полный путь: <span class="path">src/main/recources/META-INF/beans.xml</span>
+					</li>
+					<li>Помечаем класс аннотацией: <span class="name">@Named</span></li>
+				</ol>
+			</article>
+		</section>
+	</body>
+</html>

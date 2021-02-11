@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>WildFly</title>
+		<link rel="stylesheet" type="text/css" href="../style.css"/>
+		<meta charset="UTF-8"/>
+	</head>
+
+	<body>
+		<section class="menu">
+			<h2>Меню</h2>
+
+			<ul>
+				<li class="selected"><a href="index.html">WildFly</a></li>
+                <li><a href="../Maven/index.html">Maven</a></li>
+				<li><a href="../JSF/index.html">JSF</a></li>
+				<li><a href="../CDI/index.html">CDI</a></li>
+			</ul>
+		</section>
+
+		<section class="main">
+			<article>
+				<h1>
+					Подключение <span class="name">WildFly</span>
+				</h1>
+
+				<ol>
+					<li>Скачиваем сервер WildFly (<a href="https://www.wildfly.org/downloads/">Download</a>)</li>
+					<li>Создаем <span class="name">Maven</span> проект</li>
+					<li>Проверяем наличия файла <span class="path">src/main/webapp/WEB-INF/web.xml</span></li>
+					<li>
+						Заполняем файл <span class="name">web.xml</span><br/>
+						<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+	&lt;web-app version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"&gt;
+
+&lt;/web-app&gt;</code>
+					</li>
+					<li>
+						Нажимаем <span class="nav-idea">Add/Edit Configuration</span>
+						(находится справа от <span class="nav-idea">Build Project</span>)
+					</li>
+					<li>
+						Нажимаем <span class="nav-idea">Add New Configuration</span>
+						(<span class="nav-idea">+</span>)
+					</li>
+					<li>Находим <span class="nav-idea">JBoss Server</span></li>
+					<li>Выбираем <span class="nav-idea">Local</span></li>
+					<li>Нажимаем на кнопку <span class="nav-idea">Cofigure</span></li>
+					<li>
+						Нажимаем на <span class="nav-idea">Add Application Server</span>
+						(<span class="nav-idea">+</span>)
+					</li>
+					<li>Указываем путь до папки - <span class="nav-idea">JBoss Home</span></li>
+					<li>В <span class="nav-idea">Run/Debug Configuration</span> выбираем JRE</li>
+					<li>
+						Убираем <span class="nav-idea">Build</span> в
+						<span class="nav-idea">Before launch</span> - нажатием на кнопку
+						<span class="nav-idea">Remove</span>
+						(<span class="nav-idea">-</span>)
+					</li>
+					<li>
+						Затем с помощьюю <span class="name">Maven</span> собираем проект
+						<span class="nav-idea">clean, package</span>, чтобы указать
+						<span class="name">Idea</span> какой архив/артефакт необходимо запускать
+					</li>
+					<li>
+						Нажимаем <span class="nav-idea">Add/Edit Configuration</span>
+						(находится справа от <span class="nav-idea">Build Project</span>)
+					</li>
+					<li>Переходим на вкладку <span class="nav-idea">Deployment</span></li>
+					<li>Нажимаем на кнопку <span class="nav-idea">Add</span> (<span class="nav-idea">+</span>)</li>
+					<li>Выбираем <span class="nav-idea">External Source</span></li>
+					<li>
+						Указываем путь до <span class="nav-idea">war</span> архива/артефакта,
+						который был скомпилирован ранее <span class="nav-idea">Maven</span>
+					</li>
+					<li>Запускаем через <span class="nav-idea">Debug</span></li>
+				</ol>
+			</article>
+		</section>
+	</body>
+</html>

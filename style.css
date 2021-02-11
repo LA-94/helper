@@ -1,0 +1,129 @@
+body {
+    font-family: sans-serif;
+    font-size: medium;
+    line-height: 1.8em;
+
+    background-color: #E4FAFE;
+    margin: 0;
+}
+
+section.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    height: 100%;
+
+    padding: 0;
+    background-color: #D5F7FD;
+    border-right: thin solid #aaa;
+}
+
+section.menu ul {
+    list-style-type: none;
+    text-align: right;
+    padding: 0;
+}
+
+section.menu li {
+    display: block;
+
+    border: thin solid gray;
+    background-color: #79e9ff;
+}
+
+section.menu li > a {
+    display: block;
+    padding: 10px;
+
+    color: black;
+    text-decoration: none;
+}
+
+section.menu h2 {
+    text-align: center;
+}
+
+
+section.menu li.selected {
+    font-size: 1.2em;
+    background-color: #0297b5;
+
+    transform: translateX(-40px);
+    transition: transform 0.3s, font-size 0.3s;
+}
+
+
+section.menu li.selected a {
+    color: white;
+}
+
+section.menu li.selected:hover {
+    background-color: #01768E;
+    cursor: pointer;
+}
+
+section.menu li:hover {
+    background-color: #5EB6C7;
+}
+
+section.main {
+    color: #343434;
+    margin-left: 220px;
+    padding-left: 15px;
+}
+
+h1, h2 {
+    line-height: initial;;
+}
+
+h1 {
+    font-size: 2em;
+
+    margin: 0;
+    padding: 20px;
+    border-bottom: thin dotted #999;
+}
+
+li::marker {
+    font-weight: bold;
+}
+
+code {
+    font-family: monospace;
+    white-space: pre;
+    display: inline-block;
+    background-color: #f0f0f0;
+    margin: 10px;
+    padding: 10px 40px;
+    border: thin dashed #777;
+    border-radius: 40px;
+    color: #3b1914;
+}
+
+section.main a {
+    text-decoration: none;
+    border-bottom: thin dotted #777;
+}
+
+section.main a:visited {
+    color: #777;
+}
+
+span.path {
+    font-style: italic;
+    font-weight: bold;
+}
+
+span.name {
+    font-weight: bold;
+}
+
+span.nav-idea {
+    padding: 0 10px;
+    border-radius: 1.5em;
+    background-color: #ddd;
+    color: #222;
+    font-weight: bold;
+}
